@@ -14,7 +14,7 @@
 
 💬 Ask me about JavaScript , Node.js ,MongoDB ,Express.js ,Html, Css
 
-📫 How to reach me saquibmohammad38@gmail.com
+📫 How to reach me dsantoshinipatra683@gmail.com
 
 Connect with me:
 Languages and Tools:
