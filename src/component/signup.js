@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import React, { useState,useEffect } from "react";
+import {useNavigate} from "react-router-dom";
 
 const Signup = () =>{
     const [title,setTitle]=useState("")
@@ -8,21 +8,28 @@ const Signup = () =>{
     const [email,setEmail]=useState("")
     const [password,setPassword]=useState("")
     const [address,setAddress]=useState("")
-
+    const navigate = useNavigate()
+useEffect(()=>{
+    const auth = localStorage.getItem("users")
+    if(auth){
+        navigate('/')
+    }
+})
     const handleSubmit= async ()=>{
-        <h1>user successfully registered</h1>
-        let result = await fetch(('http://localhost:5000/register'),{
+        
+       
+        let result = await fetch('http://localhost:3001/register',{
             method:'post',
-            body:JSON.stringfy({title,name,phone,email,password,address}),
+            body:JSON.stringify({title,name,phone,email,password,address}),
             headers:{
                 "Content-type":"application/JSON"
             }
             })
-             result = await result.JSON
+             result = await result.json()
              console.log(result)
-         if(result){
-            navigate('/')
-         }
+        localStorage.setItem("users" ,JSON.stringify(result))
+           navigate('/')
+        
         
         
     }
