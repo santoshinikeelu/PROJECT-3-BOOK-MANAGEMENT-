@@ -6,6 +6,8 @@ import Footer from './component/footer';
 import Signup from './component/signup';
 import PrivateComponent from './component/private';
 import Login from './component/login';
+import AddBook from './component/addbook';
+import Booklist from './component/booklist';
 function App() {
   return (
    
@@ -15,10 +17,10 @@ function App() {
         <Routes>
           <Route element={<PrivateComponent />}>
           <Route path='/' element={<h1>userlist component</h1>} />
-          <Route path='/createUser' element={<h1>createUser</h1>} />
-          <Route path='/userlist' element={<h1>userlist </h1>} />
-          <Route path='/update' element={<h1>update user</h1>} />
-          <Route path='/delete' element={<h1>delete user</h1>} />
+          <Route path='/Booklist' element={<Booklist />} />
+          <Route path='/addbook' element={<AddBook />} />
+          <Route path='/updatebook' element={<h1>update </h1>} />
+          <Route path='/deletebook' element={<h1>delete </h1>} />
           <Route path='/logout' element={<h1>logged out</h1>} />
           </Route>
 

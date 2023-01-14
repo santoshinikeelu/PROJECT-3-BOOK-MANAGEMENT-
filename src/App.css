@@ -15,6 +15,9 @@
     margin: 1px;
     background-color: skyblue;
 }
+.nav-design{
+  text-align: right;
+}
 .footer{
   position: absolute;
   text-align: center;
@@ -32,6 +35,16 @@
     padding: 8px;
     width: 60%;
     border: 1px solid skyblue;
+}
+.booklist{
+  text-align: center;
+  margin-top: 30px;
+}
+.booklist ul li{
+  display: inline-block;
+  padding: 10px;
+  border: 1px solid skyblue;
+  width: 112px;
 }
 .login{
   margin-left: 30%;

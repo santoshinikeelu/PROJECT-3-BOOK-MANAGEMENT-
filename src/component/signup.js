@@ -22,7 +22,8 @@ useEffect(()=>{
             method:'post',
             body:JSON.stringify({title,name,phone,email,password,address}),
             headers:{
-                "Content-type":"application/JSON"
+                "Content-type":"application/JSON",
+                // "x-api-key": JSON.parse(localStorage.getItem('token'))
             }
             })
              result = await result.json()
